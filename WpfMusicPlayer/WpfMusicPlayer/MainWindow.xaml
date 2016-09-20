@@ -55,7 +55,7 @@
                         </TextBlock>
                     </StackPanel>
                     <ListView Grid.Row="1" Margin="2" Name="LvArtists" DockPanel.Dock="Left"
-                              ItemsSource="{Binding Artists}"
+                              ItemsSource="{Binding Artists}" SelectedIndex="{Binding ArtistsSelectedIndex}"
                               GridViewColumnHeader.Click="LvArtistsGridViewColumnHeaderClick"
                               SelectionChanged="LvArtistsSelectionChanged">
                         <ListView.View>
@@ -83,6 +83,7 @@
                               ItemTemplate="{StaticResource ItemTemplate}" 
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                               ItemsSource="{Binding Albums}"
+                              SelectedIndex="{Binding AlbumsSelectedIndex}"
                               SelectionChanged="LvAlbumsSelectionChanged">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
